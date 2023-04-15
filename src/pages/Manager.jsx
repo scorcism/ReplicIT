@@ -130,16 +130,19 @@ const Manager = () => {
     if (currUser) {
         currentUserRole = currUser.user.role;
         console.log(currUser.user._id)
-        if ((currentUserRole == 1 || currentUserRole == 3 || currentUserRole == 0)) {
+        if ((currentUserRole == 1 || currentUserRole == 0 || currentUserRole == 3)) {
             navigate('/')
         }
+        // if(currentUserRole == 3){
+        //     setShowDr(true)
+        //     // setShowMr(true)
+        // }
     }
     // console.log(currentUserRole)
     const [showMr, setShowMr] = useState(false);
     const [showDr, setShowDr] = useState(true);
 
-
-
+    
 
 
     return (

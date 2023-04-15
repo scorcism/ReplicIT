@@ -68,7 +68,7 @@ const Tech = () => {
     if (currUser) {
         currentUserRole = currUser.user.role;
         // // console.log(currentUserRole)
-        if ((currentUserRole == 2 || currentUserRole == 3 || currentUserRole == 0)) {
+        if ((currentUserRole == 2 || currentUserRole == 0)) {
             navigate('/')
         }
     }   
