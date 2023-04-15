@@ -12,7 +12,7 @@ const Message = ({ op,error }) => {
                 position:"absolute",
                 top:"6rem",
                 right:"3rem",
-                padding: "15px 25px",
+                padding: "5px 25px",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -24,7 +24,7 @@ const Message = ({ op,error }) => {
                 transition: "ease-in 0.5s",
 
             }}
-            className="alert w-32 bg-red-500 font-bold  h-28">
+            className="alert w-32 bg-red-500 font-bold  h-14">
 
                 <div className="">
                     {error}

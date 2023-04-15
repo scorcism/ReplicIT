@@ -1,5 +1,6 @@
 import { useState } from "react";
 import RejectMessage from "./RejectMessage";
+import Message from "./Message";
 
 
 const AlldrsForManager = ({ drs }) => {
@@ -52,7 +53,7 @@ const AlldrsForManager = ({ drs }) => {
     return (
         <>
             <>
-                {message && <p>{message}</p>}
+                {message && <Message op={1} error={message}/>}
                 {
                     drs.map((drs) => {
                         // const { _id, name, email, status } = drs;

@@ -39,9 +39,9 @@ const AlldrsForTech = ({ drs }) => {
                     
                 } else {
                     setMessage("Status Modifed")
-                    setTimeout(() => {
-                        navigate("/websites")
-                    }, 2000);
+                    // setTimeout(() => {
+                    //     navigate("/tech")
+                    // }, 3000);
                 }
             });
 
@@ -57,10 +57,29 @@ const AlldrsForTech = ({ drs }) => {
             }, 2000);
     }
 
+    const docVerified = () =>{
+       // Copy code here
+    }
+
     return (
         <>
             <>
-                {message && <p>{message}</p>}
+                {message && <p style={{
+                position:"absolute",
+                top:"6rem",
+                right:"3rem",
+                padding: "5px 25px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                textTransform: "capitalize",
+                border:"1px solid black",
+                borderRadius:"9px",
+                zIndex:"999",
+                transition: "ease-in 0.5s",
+
+            }}
+            className="alert w-32 bg-red-500 font-bold  h-14">{message}</p>}
                 {
                     drs.map((drs) => {
                         // const { _id, name, email, status } = drs;
@@ -113,9 +132,9 @@ const AlldrsForTech = ({ drs }) => {
                                 </td>
                                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                                     <select className="outline-none border border-gray-400 py-1 bg-slate-100" id="role" name="role" onChange={handleOnChange}>
-                                        <option value="0" defaultChecked>{status}</option>
-                                        <option title="Website on the way" value="Verified">Verified</option>
-                                        {/* <option value="Rejected">Reject</option> */}
+                                        <option value="0" title="Approved by MR" defaultChecked>{status}</option>
+                                        <option title="Website on the way" onClick={docVerified()} value="Verified">Verified</option>
+                                        
                                     </select>
                                 </td>
                             </tr>

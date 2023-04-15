@@ -8,6 +8,7 @@ const RejectMessage = ({drs}) => {
     let navigate = useNavigate();
     let localAuth = localStorage.getItem('auth-token')
     const [currUser, setCurrUser] = useState();
+    const [toTech, setToTech] = useState(false);
     let currentUserRole;
     const [message, setMessage] = useState("");
 
@@ -52,6 +53,10 @@ const RejectMessage = ({drs}) => {
             body: JSON.stringify({
                 message: message
             })
+            
+     
+
+            
         };
         fetch(`${process.env.REACT_APP_URL}/api/auth/setrejectmessage/${id}`, requestOptions)
             .then(response => response.json())
@@ -59,8 +64,7 @@ const RejectMessage = ({drs}) => {
                 if (data.error) {
                     // console.log("error")
                     setMessage(data.error)
-                    setTimeout(() => {
-                    }, 1000);
+                    
                 } else {
                     // console.log("success")
                     setMessage("Status Modifed")
@@ -69,6 +73,11 @@ const RejectMessage = ({drs}) => {
             });
     }
 
+    if(toTech){
+        setTimeout(() => {
+            navigate("/tech")
+        }, 1000);
+    }
 
     useEffect(() => {
         getCurrentUserData()
