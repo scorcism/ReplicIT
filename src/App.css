@@ -54,3 +54,7 @@ main{
   overflow-x: scroll;
   white-space: nowrap;
 } */
+
+.alert{
+  transition: ease-in 0.25s;
+}

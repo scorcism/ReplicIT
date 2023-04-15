@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import DashBoardStats from '../components/DashboardStats';
 import Dashbordtable from '../components/Dashbordtable';
 import Sidebar from '../components/Sidebar';
+import Message from '../components/Message';
 
 
 
@@ -68,7 +69,7 @@ const Dashboard = () => {
         domain: "",
         address: ""
     })
-    const [error, setError] = useState();
+    const [error, setError] = useState("");
     let currentUserId;
     const getCurrentUserData = () => {
 
@@ -391,6 +392,12 @@ const Dashboard = () => {
                     })
                 } else {
                     setError("Doc Created")
+                    // let mes = {
+                    //     "status":"green",
+                    //     "message":"Doc added"
+                    // };
+
+                    // <Message mes= {mes} />
 
                 }
             });
@@ -438,6 +445,7 @@ const Dashboard = () => {
         <>
             <Sidebar />
             <div className="flex flex-col w-full">
+                
 
                 <section className="header_dashboard bg-[#4FBAE7] h-12 w-full px-2 flex border-b border-b-black">
                     <div className="flex flex-row items-center h-full justify-between w-full font-sans text-xl text-black ">
@@ -493,11 +501,14 @@ const Dashboard = () => {
                 </section>
 
                 {/* This is to show message */}
-                {error && <section className='bg-red-300 font-bold  h-7 flex flex-row justify-center'>
-                    {error}
+                { error && <section className=''>
+                    {/* {error} */}
+                    <Message op={1} error={error}/>
                 </section>
                 }
-
+                {error && <section>
+                    {/* <Message /> */}
+                    </section>}
                 {
                     (currentUserRole == 3 || currentUserRole == 2) && showForm &&
 
@@ -748,7 +759,7 @@ const Dashboard = () => {
                                                     <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
                                                         Message
                                                     </th>
-                                                </tr>
+                                                </tr>ails3
                                             </thead>
                                             <tbody>
                                                 <Dashbordtable drs={mydrs} />
@@ -763,7 +774,7 @@ const Dashboard = () => {
                                 {show == false &&
                                     <div>
                                         <div class="text-center text-xl mb-2">
-                                            <span class="font-bold "> List of All Rejected Doctors</span>
+                                            <span class="font-bold "> List of All Rejected Doctors Requests</span>
                                         </div>
                                         <table class="min-w-full">
                                             <thead class="bg-white border-b">
