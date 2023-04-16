@@ -24,7 +24,7 @@ const Message = ({ op,error }) => {
                 transition: "ease-in 0.5s",
 
             }}
-            className="alert w-32 bg-red-500 font-bold  h-14">
+            className="alert w-52 bg-red-500 font-bold  h-14">
 
                 <div className="">
                     {error}

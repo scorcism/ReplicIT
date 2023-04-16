@@ -459,11 +459,13 @@ const Dashboard = () => {
                         {(currentUserRole == 3 || currentUserRole == 2) &&
                             <div class="mb-1">
                                 <div className="actionbutton">
-                                    <a style={{
+                                    <a 
+                                    style={{
                                         display: "flex",
                                         alignItems: "center",
                                         justifyContent: "space-between",
-                                    }} className='text-sm text-white px-7 py-2 border-red bg-purple-700 hover:bg-purple-600 border-1 rounded-xl font-bold uppercase border-black cursor-pointer '
+                                    }} 
+                                    className='text-sm text-white px-7 py-2 border-red bg-purple-700 hover:bg-purple-600 border-1 rounded-xl font-bold uppercase border-black cursor-pointer '
                                         onClick={() => {
                                             if (showForm) {
                                                 setShowForm(false)
@@ -479,7 +481,11 @@ const Dashboard = () => {
                         {currentUserRole == 0 &&
                             <div>
                                 <div className="actionbutton">
-                                    <a className='text-sm text-white px-7 py-2 border-red bg-purple-700 hover:bg-purple-600 border-1 rounded-xl font-bold uppercase border-black cursor-pointer'
+                                    <a style={{
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "space-between",
+                                    }}  className='text-sm text-white px-7 py-2 border-red bg-purple-700 hover:bg-purple-600 border-1 rounded-xl font-bold uppercase border-black cursor-pointer'
                                         onClick={() => {
                                             if (createNewDoctor) {
                                                 setCreateNewDoctor(false)
@@ -495,7 +501,11 @@ const Dashboard = () => {
                         {currentUserRole == 1 &&
                             <div>
                                 <div className="actionbutton">
-                                    <a className='text-sm text-white px-7 py-2 border-red bg-purple-700 hover:bg-purple-600 border-1 rounded-xl font-bold uppercase border-black cursor-pointer'
+                                    <a style={{
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "space-between",
+                                    }}  className='text-sm text-white px-7 py-2 border-red bg-purple-700 hover:bg-purple-600 border-1 rounded-xl font-bold uppercase border-black cursor-pointer'
                                     ><TiUserAdd/>&nbsp;create</a>
                                 </div>
                             </div>
