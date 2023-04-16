@@ -717,7 +717,7 @@ const Dashboard = () => {
                 <DashBoardStats/>
                 
 
-                <section className='flex flex-row w-full justify-around bg-slate-200'>
+                <section  className='pt-4 flex flex-row w-full justify-around bg-slate-200'>
                     <p className={`text-sm text-white px-4 py-2 border-red bg-purple-700 hover:bg-purple-600 border-1 rounded-xl font-bold uppercase border-black cursor-pointer mb-3`}
                         style={{
                             display: currentUserRole > 0 ? "none" : "block",
@@ -733,7 +733,7 @@ const Dashboard = () => {
                                 {show == true &&
                                     <div>
                                         <div class="text-center text-xl mb-2">
-                                            <span class="font-bold"> List of All Your Rejected Doctors</span>
+                                            <span class="font-bold"> List of All Your Rejected Doctors Requests</span>
                                         </div>
                                         <table class="min-w-full">
                                             <thead class="bg-white border-b">

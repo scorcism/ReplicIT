@@ -165,7 +165,7 @@ const Admin = () => {
                         Admin Page
                     </h2>
                     {currUser && currentUserRole == 3 ? <div>
-                        <div className="bg-white px-2 flex flex-row justify-around items-center">
+                        <div  className="bg-gray-400 py-4 px-2 flex flex-row justify-around items-center">
                             <div className="text-sm text-white px-4 py-2 border-red bg-purple-700 hover:bg-purple-600 border-1 rounded-xl font-bold uppercase border-black cursor-pointer mt-2" onClick={() => { setToShow(false) }}>
                                 Members
                             </div>

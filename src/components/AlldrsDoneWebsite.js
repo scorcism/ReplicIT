@@ -51,7 +51,7 @@ const AlldrsDoneWebsite = ({ drs }) => {
                                 {status}
                             </td>
                                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
-                                   <a href={`//${website}`} target="_blank">{website}</a>
+                                   <a className="text-red-500 underline" href={`//${website}`} target="_blank">{website}</a>
                                 </td>
                             </tr>
                         )

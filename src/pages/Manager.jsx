@@ -164,11 +164,11 @@ const Manager = () => {
                     <h2 className='text-black text-center text-xl bg-slate-200 capitalize font-serif h-10 items-center justify-center flex  '>
                         All the requests for manager are here
                     </h2>
-                    <section className='flex flex-row bg-white w-full justify-around'>
+                    <section className='bg-gray-400 py-1 flex flex-row w-full justify-around'>
                         <p className='mt-3 text-sm text-white px-4 py-2 border-red bg-purple-700 hover:bg-purple-600 border-1 rounded-xl font-bold uppercase border-black cursor-pointer mb-3' onClick={() => {
                             setShowDr(true)
                             setShowMr(false)
-                        }} >Doctors for Approval</p>
+                        }} >Doctors Requests for Approval</p>
                         <p style={{
                             display: currentUserRole == 2 ? "block" : "none"
                         }} className='mt-3 text-sm text-white px-4 py-2 border-red bg-purple-700 hover:bg-purple-600 border-1 rounded-xl font-bold uppercase border-black cursor-pointer mb-3' onClick={() => {

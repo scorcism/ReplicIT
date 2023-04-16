@@ -71,12 +71,10 @@ const Websites = () => {
     // // console.log(currUser)
     if (currUser) {
         currentUserRole = currUser.user.role;
-        if(!( currentUserRole != 1|| currentUserRole != 3)){
+        if(currentUserRole == 0 || currentUserRole == 2){
             navigate("/")
         }
-        if(currentUserRole ===0){
-            navigate("/")
-        }
+        
     }
 
     

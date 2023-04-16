@@ -6,7 +6,8 @@ import {
     FaRegChartBar,
     FaCommentAlt,
     FaShoppingBag,
-    FaThList
+    FaThList,
+    FaCodeBranch
 } from "react-icons/fa";
 import { NavLink, useNavigate } from 'react-router-dom';
 
@@ -42,7 +43,7 @@ const Sidebar = ({ children }) => {
         {
             path: "/websites",
             name: "Websites",
-            icon: <FaThList />
+            icon: <FaCodeBranch />
         },
         {
             path: "/donewebsites",
