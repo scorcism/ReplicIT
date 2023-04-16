@@ -8,15 +8,15 @@ import { TiUserAdd, } from "react-icons/ti";
 
 
 
-function checkpassword(){
+function checkpassword() {
     let password1 = document.getElementById('password').value;
     let password2 = document.getElementById('cpassword').value;
 
-    let btn1= document.getElementById('createmember')
-    if(password1 != password2){
+    let btn1 = document.getElementById('createmember')
+    if (password1 != password2) {
         btn1.innerHTML = `<a className="text-md text-white px-7 py-2 border-red bg-purple-700 hover:bg-purple-600 border-1 rounded-xl font-[] font-bold capitalize border-black cursor-pointer">Check Password</a>`
         btn1.style.opacity = (0.4);
-    }else{
+    } else {
         btn1.innerText = "Create Member"
         btn1.style.opacity = (1);
 
@@ -121,7 +121,7 @@ const Dashboard = () => {
         if (!localAuth) {
             navigate('/login')
         }
-        document.title="Dashboard - Replicit"
+        document.title = "Dashboard - Replicit"
         getCurrentUserData();
         getAllDocs();
         getAllDocsMr();
@@ -247,7 +247,7 @@ const Dashboard = () => {
             lastname: "",
             email: "",
             password: "",
-            cpassword:"",
+            cpassword: "",
             role: ""
         })
         setTimeout(() => {
@@ -290,7 +290,7 @@ const Dashboard = () => {
                         lastname: newMember.lastname,
                         email: newMember.email,
                         password: newMember.password,
-                        cpassword:"",
+                        cpassword: "",
                         role: ""
                     })
                 } else {
@@ -320,7 +320,7 @@ const Dashboard = () => {
             lastname: "",
             email: "",
             password: "",
-            cpassword:"",
+            cpassword: "",
             role: ""
         })
         setTimeout(() => {
@@ -446,7 +446,7 @@ const Dashboard = () => {
         <>
             <Sidebar />
             <div className="flex flex-col w-full">
-                
+
 
                 <section className="header_dashboard bg-[#4FBAE7] h-12 w-full px-2 flex border-b border-b-black">
                     <div className="flex flex-row items-center h-full justify-between w-full font-sans text-xl text-black ">
@@ -459,13 +459,13 @@ const Dashboard = () => {
                         {(currentUserRole == 3 || currentUserRole == 2) &&
                             <div class="mb-1">
                                 <div className="actionbutton">
-                                    <a 
-                                    style={{
-                                        display: "flex",
-                                        alignItems: "center",
-                                        justifyContent: "space-between",
-                                    }} 
-                                    className='text-sm text-white px-7 py-2 border-red bg-purple-700 hover:bg-purple-600 border-1 rounded-xl font-bold uppercase border-black cursor-pointer '
+                                    <a
+                                        style={{
+                                            display: "flex",
+                                            alignItems: "center",
+                                            justifyContent: "space-between",
+                                        }}
+                                        className='text-sm text-white px-7 py-2 border-red bg-purple-700 hover:bg-purple-600 border-1 rounded-xl font-bold uppercase border-black cursor-pointer '
                                         onClick={() => {
                                             if (showForm) {
                                                 setShowForm(false)
@@ -474,7 +474,7 @@ const Dashboard = () => {
                                             }
                                         }
                                         }
-                                    ><TiUserAdd/>&nbsp;create</a>
+                                    ><TiUserAdd />&nbsp;create</a>
                                 </div>
                             </div>
                         }
@@ -485,7 +485,7 @@ const Dashboard = () => {
                                         display: "flex",
                                         alignItems: "center",
                                         justifyContent: "space-between",
-                                    }}  className='text-sm text-white px-7 py-2 border-red bg-purple-700 hover:bg-purple-600 border-1 rounded-xl font-bold uppercase border-black cursor-pointer'
+                                    }} className='text-sm text-white px-7 py-2 border-red bg-purple-700 hover:bg-purple-600 border-1 rounded-xl font-bold uppercase border-black cursor-pointer'
                                         onClick={() => {
                                             if (createNewDoctor) {
                                                 setCreateNewDoctor(false)
@@ -494,7 +494,7 @@ const Dashboard = () => {
                                             }
                                         }
                                         }
-                                    ><TiUserAdd/>&nbsp;create</a>
+                                    ><TiUserAdd />&nbsp;create</a>
                                 </div>
                             </div>
                         }
@@ -505,8 +505,8 @@ const Dashboard = () => {
                                         display: "flex",
                                         alignItems: "center",
                                         justifyContent: "space-between",
-                                    }}  className='text-sm text-white px-7 py-2 border-red bg-purple-700 hover:bg-purple-600 border-1 rounded-xl font-bold uppercase border-black cursor-pointer'
-                                    ><TiUserAdd/>&nbsp;create</a>
+                                    }} className='text-sm text-white px-7 py-2 border-red bg-purple-700 hover:bg-purple-600 border-1 rounded-xl font-bold uppercase border-black cursor-pointer'
+                                    ><TiUserAdd />&nbsp;create</a>
                                 </div>
                             </div>
 
@@ -516,14 +516,14 @@ const Dashboard = () => {
                 </section>
 
                 {/* This is to show message */}
-                { error && <section className=''>
+                {error && <section className=''>
                     {/* {error} */}
-                    <Message op={1} error={error}/>
+                    <Message op={1} error={error} />
                 </section>
                 }
                 {error && <section>
                     {/* <Message /> */}
-                    </section>}
+                </section>}
                 {
                     (currentUserRole == 3 || currentUserRole == 2) && showForm &&
 
@@ -580,7 +580,7 @@ const Dashboard = () => {
                                         <label class="block font-bold mb-2" for="password">
                                             Password
                                         </label>
-                                        <input  name='password' onChange={handleOnChange}
+                                        <input name='password' onChange={handleOnChange}
                                             class="shadow appearance-none border border-slate-500 rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
                                             id="password" value={newMember.password} type="password" placeholder="Password" />
                                     </div>
@@ -588,8 +588,8 @@ const Dashboard = () => {
                                         <label class="block font-bold mb-2" for="password">
                                             Confirm Password
                                         </label>
-                                        <input name='cpassword'  onChange={handleOnChange} onKeyUp={checkpassword}
-                                            class="shadow appearance-none border border-slate-500 rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" 
+                                        <input name='cpassword' onChange={handleOnChange} onKeyUp={checkpassword}
+                                            class="shadow appearance-none border border-slate-500 rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
                                             id="cpassword" value={newMember.cpassword} type="password" placeholder="Confirm Password" />
                                     </div>
                                     <span className='text-red-500 text-sm font-bold'>{notPassword}</span>
@@ -599,7 +599,7 @@ const Dashboard = () => {
                                     <div class="px-9 mt-6 -mb-3">
                                         {currentUserRole == 3 ? <a onClick={createnewMemeber} id="createmember" className="text-md text-white px-7 py-2 border-red bg-purple-700 hover:bg-purple-600 border-1 rounded-xl font-[] font-bold capitalize border-black cursor-pointer">
                                             Create Member</a> :
-                                            <a onClick={createnewMr}  id="createmember"  className="text-md text-white px-7 py-2 border-red bg-purple-700 hover:bg-purple-600 border-1 rounded-xl font-[] font-bold capitalize border-black cursor-pointer">
+                                            <a onClick={createnewMr} id="createmember" className="text-md text-white px-7 py-2 border-red bg-purple-700 hover:bg-purple-600 border-1 rounded-xl font-[] font-bold capitalize border-black cursor-pointer">
                                                 Create MR</a>
                                         }
                                     </div>
@@ -729,10 +729,10 @@ const Dashboard = () => {
                 }
 
                 {/* Dashboard section start */}
-                <DashBoardStats/>
-                
+                <DashBoardStats />
 
-                <section  className='pt-4 flex flex-row w-full justify-around bg-slate-200'>
+
+                <section className='pt-4 flex flex-row w-full justify-around bg-slate-200'>
                     <p className={`text-sm text-white px-4 py-2 border-red bg-purple-700 hover:bg-purple-600 border-1 rounded-xl font-bold uppercase border-black cursor-pointer mb-3`}
                         style={{
                             display: currentUserRole > 0 ? "none" : "block",
@@ -774,7 +774,7 @@ const Dashboard = () => {
                                                     <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
                                                         Message
                                                     </th>
-                                                </tr>ails3
+                                                </tr>
                                             </thead>
                                             <tbody>
                                                 <Dashbordtable drs={mydrs} />
