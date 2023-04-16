@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Dashbordtable from '../components/Dashbordtable';
 import Sidebar from '../components/Sidebar';
+import { TiUserAdd, } from "react-icons/ti";
 
 const Dashboard = () => {
     let navigate = useNavigate();
@@ -279,7 +280,7 @@ const Dashboard = () => {
                                             }
                                         }
                                         }
-                                    >create</a>
+                                    > <TiUserAdd/> create</a>
                                 </div>
                             </div>
                             :
@@ -299,7 +300,7 @@ const Dashboard = () => {
                                             }
                                         }
                                         }
-                                    >create</a>
+                                    ><TiUserAdd/> create</a>
                                 </div>
                             </div>
                             :

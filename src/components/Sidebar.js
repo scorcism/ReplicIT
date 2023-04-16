@@ -9,6 +9,17 @@ import {
     FaThList,
     FaCodeBranch
 } from "react-icons/fa";
+import { 
+    TiChartArea,
+    TiBusinessCard,
+    TiInputChecked,
+    TiInputCheckedOutline,
+    TiKeyboard,
+    TiUser,
+    TiThList
+
+
+ } from "react-icons/ti";
 import { NavLink, useNavigate } from 'react-router-dom';
 
 
@@ -18,37 +29,37 @@ const Sidebar = ({ children }) => {
         {
             path: "/",
             name: "Dashboard",
-            icon: <FaTh />
+            icon: <TiChartArea />
         },
         {
             path: "/allrequests",
             name: "Requests",
-            icon: <FaUserAlt />
+            icon: <TiThList />
         },
         {
             path: "/manager",
             name: "Manager",
-            icon: <FaRegChartBar />
+            icon: <TiBusinessCard />
         },
         {
             path: "/tech",
             name: "Tech",
-            icon: <FaCommentAlt />
+            icon: <TiKeyboard />
         },
         {
             path: "/admin",
             name: "Admin",
-            icon: <FaShoppingBag />
+            icon: <TiUser />
         },
         {
             path: "/websites",
             name: "Websites",
-            icon: <FaCodeBranch />
+            icon: <TiInputCheckedOutline />
         },
         {
             path: "/donewebsites",
             name: "Done Websites",
-            icon: <FaThList />
+            icon: <TiInputChecked />
         },
     ]
 
@@ -70,7 +81,7 @@ const Sidebar = ({ children }) => {
                 {
                     menuItem.map((item, index) => (
                         <NavLink to={item.path} key={index} className="flex text-black px-3 py-1 gap-1 my-3 transition-all hover:bg-slate-900 hover:text-white hover:rounded-md" >
-                            <div className="mx-2 mt-1">{item.icon}</div>
+                            <div style={{fontSize:"25px"}} className="mx-2 mt-1 ">{item.icon}</div>
                             <div className="text-xl">{item.name}</div>
                         </NavLink>
                     ))
